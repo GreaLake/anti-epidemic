@@ -4,44 +4,32 @@ import java.util.Date;
 
 /**
  * @author hqb
- * 轮播图表
  */
 public class Carousel {
 
-    /**
-     * 轮播图id
-     */
     private Long id;
 
-    /**
-     * 轮播图名
-     */
     private String name;
 
-    /**
-     * 轮播图图片id
-     */
     private Long image;
 
-    /**
-     * 管理员id
-     */
-    private Integer inputer;
+    private Long inputer;
 
-    /**
-     * 逻辑删除
-     */
     private Boolean isDelete;
 
-    /**
-     * 创建时间
-     */
     private Date gmtCreate;
 
-    /**
-     * 更新时间
-     */
     private Date gmtUpdate;
+
+    public Carousel(Long id, String name, Long image, Long inputer, Boolean isDelete, Date gmtCreate, Date gmtUpdate) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
+        this.inputer = inputer;
+        this.isDelete = isDelete;
+        this.gmtCreate = gmtCreate;
+        this.gmtUpdate = gmtUpdate;
+    }
 
     public Long getId() {
         return id;
@@ -67,11 +55,11 @@ public class Carousel {
         this.image = image;
     }
 
-    public Integer getInputer() {
+    public Long getInputer() {
         return inputer;
     }
 
-    public void setInputer(Integer inputer) {
+    public void setInputer(Long inputer) {
         this.inputer = inputer;
     }
 

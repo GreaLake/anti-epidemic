@@ -110,4 +110,14 @@ public class Admin {
                 ", gmtUpdate=" + gmtUpdate +
                 '}';
     }
+
+    public Admin(Long id, String name, String passwd, String role, Boolean isDelete, Date gmtCreate, Date gmtUpdate) {
+        this.id = id;
+        this.name = name;
+        this.passwd = passwd;
+        this.role = role;
+        this.isDelete = isDelete;
+        this.gmtCreate = gmtCreate;
+        this.gmtUpdate = gmtUpdate;
+    }
 }
