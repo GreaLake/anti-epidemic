@@ -158,9 +158,11 @@ public class CarouselDaoImpl implements CarouselDao {
             // 获取连接
             conn = DruidUtils.getConnection();
             // 定义SQL
-            String sql = "select id,name,image,inputer,is_delete,gmt_create,gmt_modified from tb_carousel where is_delete=0";
+            String sql = "select id,name,image,inputer,is_delete,gmt_create,gmt_modified from tb_carousel where id=? and is_delete=0";
             // 获取sql对象的preparastatement
             ps = conn.prepareStatement(sql);
+            // 设置字段id
+            ps.setLong(1,id);
             // 执行sql语句
             rs = ps.executeQuery();
             // 封装对象，装载集合
